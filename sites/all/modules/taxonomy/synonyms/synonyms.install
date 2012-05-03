@@ -1,0 +1,82 @@
+<?php
+/**
+ * @file
+ * install file for Synonyms module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function synonyms_install() {
+  // Create the synonym field
+  $field = array(
+    'field_name' => 'synonyms_synonym', // The unique machine name used to refer to this field
+    'type' => 'text', // Each synonym will be a text string
+    'cardinality' => FIELD_CARDINALITY_UNLIMITED, // Allow an unlimited number of synonyms per term
+  );
+  field_create_field($field);
+  
+  // Attach an instance of the field to every vocabulary
+  foreach (taxonomy_get_vocabularies() as $vocabulary) {
+    $instance = array(
+      'field_name' => 'synonyms_synonym',
+      'entity_type' => 'taxonomy_term',
+      'bundle' => $vocabulary->machine_name,
+      'label' => st('Synonyms'),
+    );
+    field_create_instance($instance);
+    
+    drupal_set_message('Synonyms field has been added to vocabulary <em>' . $vocabulary->name . '</em>');
+  }
+
+  // Populate the synonym fields with any existing synonyms
+  synonyms_convert_taxonomy_term_synonym_table_to_fields();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function synonyms_uninstall() {
+  // Delete the field (and all instances of it)
+  field_delete_field('synonyms_synonym');
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function synonyms_update_7100() {
+  // The conversion of taxonomy_term_synonym table needs to occur
+  // if upgrading from a previous version of synonyms, or if run
+  // on an upgraded D6 database that had synonyms defined (but not
+  // synonyms moodule). Therefore run this function in both hook_install
+  // and hook_update_N.
+  // See http://lists.drupal.org/pipermail/development/2009-November/034177.html
+  synonyms_convert_taxonomy_term_synonym_table_to_fields();
+}
+
+/**
+ * Converts taxonomy term synonyms to use Fields API.
+ */
+function synonyms_convert_taxonomy_term_synonym_table_to_fields() {
+  if (db_table_exists('taxonomy_term_synonym')) {
+    // Create an array of all existing synonyms
+    $result = db_query('SELECT tid, name FROM {taxonomy_term_synonym} ORDER BY tsid ASC');
+    foreach ($result as $record) {
+      $synonyms[$record->tid][] = $record->name;
+    }
+
+    // Load each term, populate synonym field information, and save.
+    $terms = taxonomy_term_load_multiple(array_keys($synonyms));
+    foreach ($terms as $tid => $term) {
+      foreach ($synonyms[$tid] as $delta => $synonym) {
+        $term->synonyms_synonym['und'][$delta]['value'] = $synonym;
+      }
+      taxonomy_term_save($term);
+    }
+
+    // Drop the old synonyms table
+    db_drop_table('taxonomy_term_synonym');
+    
+    drupal_set_message('Existing synonyms for ' . count($terms) . ' terms have been imported.');
+  }
+}

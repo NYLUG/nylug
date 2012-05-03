@@ -1,0 +1,136 @@
+<?php
+
+/**
+ * Extract terms.
+ *
+ * @param $text
+ *   The text being parsed by the extractor.
+ * @param $vocabulary
+ *   Vocabulary defining terms which should be extracted.
+ *
+ * @return
+ *   An array of tids.
+ */
+function rules_autotag_extract($text, $vocabulary) {
+  $extracted_tids = array();
+  $terms = rules_autotag_get_term_names($vocabulary);
+
+  $text = rules_autotag_clean_text($text);
+  $text_tokens = array_flip(rules_autotag_split_text($text));
+
+  $matchings_term_splits = array_intersect_key($terms, $text_tokens);
+
+  // Loops over all matched splits and checks if a term name consists
+  // of multiple splits. If so, an additional text parsing for the whole
+  // term name is performed.
+  foreach ($matchings_term_splits as $results) {
+    foreach ($results as $result) {
+      $tid = $result['tid'];
+      if (!in_array($tid, $extracted_tids)) {
+        if ($result['splitted']) {
+          if (strpos($text, $result['original_term_name']) !== FALSE) {
+            $extracted_tids[] = $tid;
+          }
+        }
+        else {
+          $extracted_tids[] = $tid;
+        }
+      }
+    }
+  }
+  return $extracted_tids;
+}
+
+/**
+ * Returns an array of terms, keyed by splitted term names.
+ *
+ * The structure can be modified with hook_rules_autotag_terms_alter()
+ * implementations.
+ */
+function rules_autotag_get_term_names($vocabulary) {
+  $terms = &drupal_static(__FUNCTION__ . ':terms', array());
+
+  if (!isset($terms[$vocabulary->vid])) {
+    $terms[$vocabulary->vid] = array();
+    $result = db_select('taxonomy_term_data', 't')
+      ->fields('t')
+      ->condition('t.vid', $vocabulary->vid)
+      ->execute();
+
+    foreach ($result as $term) {
+      rules_autotag_build_names_array($terms[$vocabulary->vid], $term->name, $term->tid);
+    }
+
+    drupal_alter('rules_autotag_terms', $terms[$vocabulary->vid], $vocabulary);
+  }
+  return $terms[$vocabulary->vid];
+}
+
+/**
+ * Helper function for generating the term names array.
+ *
+ * @param $terms
+ *   An array of terms, where the new name is going to be added.
+ * @param $name
+ *   The name (term name, synonym, ...) to add.
+ * @param $tid
+ *   The corresponding term id.
+ */
+function rules_autotag_build_names_array(&$terms, $name, $tid) {
+  $name = rules_autotag_clean_term($name);
+  $name_splits = rules_autotag_split_text($name);
+  foreach ($name_splits as $split) {
+    $terms[$split][] = array(
+      'tid' => $tid,
+      'splitted' => (count($name_splits) > 1) ? TRUE : FALSE,
+      'original_term_name' => $name,
+    );
+  }
+}
+
+/**
+ * Converts term names to lower case.
+ */
+function rules_autotag_clean_term($text) {
+  return strtolower($text);
+}
+
+/**
+ * Removes tags from a text and converts it to lower case.
+ * Additionally content from CDATA tags is extracted and added to the text.
+ */
+function rules_autotag_clean_text($text) {
+  preg_match_all('/<!\[CDATA\[(.*?)\]\]>/is', $text, $matches);
+  $text = str_replace($matches[0], $matches[1], $text);
+  $text = strip_tags($text);
+  $text = strtolower($text);
+  return $text;
+}
+
+/**
+ * Splits a given text and into separate words and returns them as array.
+ */
+function rules_autotag_split_text($text) {
+  return preg_split("/[\s,.:\-\(\)\[\]{}*\/]+/", $text);
+}
+
+/**
+ * Implementation of hook_rules_autotag_terms_alter().
+ */
+function rules_autotag_rules_autotag_terms_alter(&$terms, $vocabulary) {
+  // Adds synonyms to terms array structure.
+  if (module_exists('synonyms')) {
+    $field_info = field_info_field('synonyms_synonym');
+    if (isset($field_info['bundles']['taxonomy_term']) && in_array($vocabulary->machine_name, $field_info['bundles']['taxonomy_term'])) {
+      $query = db_select('field_data_synonyms_synonym', 's');
+      $query ->join('taxonomy_term_data', 'd', 'd.tid = s.entity_id');
+      $result = $query->fields('s', array('entity_id', 'synonyms_synonym_value'))
+        ->condition('d.vid', $vocabulary->vid)
+        ->execute();
+
+      foreach ($result as $row) {
+        rules_autotag_build_names_array($terms, $row->synonyms_synonym_value, $row->entity_id);
+      }
+    }
+  }
+}

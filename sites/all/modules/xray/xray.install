@@ -1,0 +1,120 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the X-ray module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function xray_schema() {
+  $schema['xray_hook'] = array(
+    'description' => 'A record of hook invocations (using module_invoke_all).',
+    'fields' => array(
+      'hook' => array(
+        'description' => 'The primary identifier for a node.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'first' => array(
+        'description' => 'Timestamp of when the hook was first recorded.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'last' => array(
+        'description' => 'Timestamp of when the hook was last recorded.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'count' => array(
+        'description' => 'Total count of times the hook is recorded as invoked.  Note that this is only recorded after a cache clear.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'modules' => array(
+        'description' => 'A serialized array of module machine names for the modules which implement this hook.',
+        'type' => 'blob',
+        'not null' => TRUE,
+      ),
+      'modules_count' => array(
+        'description' => 'Count of the number of implementing modules.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'indexes' => array(
+      'xray_hook_first' => array('first'),
+      'xray_hook_last'  => array('last'),
+      'xray_hook_count' => array('count'),
+    ),
+    'primary key' => array('hook'),
+  );
+  return $schema;
+}
+
+/**
+ * Implements hook_update_N. Create the hook invocation database table.
+ */
+function xray_update_7000() {
+  $schema['xray_hook'] = array(
+    'description' => 'A record of hook invocations (using module_invoke_all).',
+    'fields' => array(
+      'hook' => array(
+        'description' => 'The primary identifier for a node.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'first' => array(
+        'description' => 'Timestamp of when the hook was first recorded.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'last' => array(
+        'description' => 'Timestamp of when the hook was last recorded.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'count' => array(
+        'description' => 'Total count of times the hook is recorded as invoked.  Note that this is only recorded after a cache clear.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'modules' => array(
+        'description' => 'A serialized array of module machine names for the modules which implement this hook.',
+        'type' => 'blob',
+        'not null' => TRUE,
+      ),
+      'modules_count' => array(
+        'description' => 'Count of the number of implementing modules.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'indexes' => array(
+      'xray_hook_first' => array('first'),
+      'xray_hook_last'  => array('last'),
+      'xray_hook_count' => array('count'),
+    ),
+    'primary key' => array('hook'),
+  );
+}

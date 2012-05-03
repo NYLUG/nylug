@@ -1,0 +1,9 @@
+name = Delta Color
+description = Makes the color module available for Delta templates.
+core = 7.x
+version = 7.x-3.x-dev
+package = Theme Tools
+
+dependencies[] = delta
+dependencies[] = color
+

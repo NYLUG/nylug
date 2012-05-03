@@ -1,0 +1,93 @@
+<?php
+
+/**
+ * @file
+ * Synonyms module.
+ */
+
+/**
+ * Implements hook_taxonomy_vocabulary_insert().
+ * 
+ * Attach an instance of the synonym field to every
+ * new vocabulary on creation.
+ */
+function synonyms_taxonomy_vocabulary_insert($vocabulary) {
+  $instance = array(
+    'field_name' => 'synonyms_synonym',
+    'entity_type' => 'taxonomy_term',
+    'bundle' => $vocabulary->machine_name,
+    'label' => t('Synonyms for this term'),
+  );
+  field_create_instance($instance);
+}
+
+/**
+ * Returns all synonyms for a given term id.
+ * 
+ *  @param $tid
+ *   A term ID.
+ *
+ * @return
+ *   An array containing all synonyms of the given term id.
+ */
+function synonyms_get_synonyms($tid) {
+  if ($tid) {
+    return db_query('SELECT synonyms_synonym_value FROM {field_data_synonyms_synonym} WHERE entity_id = :tid', array(':tid' => $tid))->fetchCol();
+  }
+  else {
+    return array();
+  }
+}
+
+/**
+ * Returns the term object that has the given string as a synonym.
+ * 
+ * @param $synonym
+ *  A string containing the synonym to search for.
+ *  
+ * @return
+ *  An array of term objects containing that synonym. 
+ */
+function synonyms_get_synonym_root($synonym) {
+    $tids = db_query('SELECT tid FROM {field_data_synonyms_synonym} s, {taxonomy_term_data} t WHERE t.tid = s.entity_id AND s.synonyms_synonym_value = :name', array(':name' => $synonym))->fetchCol();
+    $terms = taxonomy_term_load_multiple($tids);
+    return $terms;
+}
+
+/**
+ * Implements hook_node_update_index().
+ *
+ * Ensures that synonyms are included when indexing a node
+ */
+function synonyms_node_update_index($node) {
+ // Get a list of all term reference fields attached to this node type
+  $term_reference_fields = db_query(
+    "SELECT fc.field_name
+     FROM {field_config_instance} fci
+     JOIN {field_config} fc ON fci.field_id = fc.id
+     WHERE fci.bundle = :type
+     AND fc.type = 'taxonomy_term_reference'", array(':type' => $node->type))->fetchCol();
+
+  $synonyms = array();
+  // Loop through each vocabulary attached to this node type
+  foreach ($term_reference_fields as $term_reference_field) {
+    // Check if the node contains any taxonomy terms from this vocabulary
+    if ($node->nid > 0 && !empty($node->$term_reference_field)) {
+      // Get the vocabulary object
+      $taxonomy_tags = $node->$term_reference_field;
+      // Loop through each term attached to the node
+      foreach ($taxonomy_tags['und'] as $term) {
+        // Loop through each synonym of this term and add them to the array
+        foreach (synonyms_get_synonyms($term['tid']) as $synonym) {
+          $synonyms[] = $synonym;
+        }
+      }      
+    }
+  }
+  if (!empty($synonyms)) {
+    return '<strong>(' . implode(', ', $synonyms) . ')</strong>';
+  }
+  else {
+    return FALSE;
+  }
+}

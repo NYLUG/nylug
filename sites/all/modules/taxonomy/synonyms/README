@@ -1,0 +1,12 @@
+Synonyms is a small module that makes it possible to search for taxonomy term synonyms via the built-in search module.
+
+Here's the thread that started it all: http://drupal.org/node/83027
+
+For the module to find your content, your search index needs to be updated regularly. 
+See: Administer >> Settings >> Search.
+
+Rewritten and ported to Drupal 7 by tanoshimi.
+
+Author:
+Bojan Zivanovic <bojanz@gmail.com>
+http://vividintent.com

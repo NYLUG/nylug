@@ -1,0 +1,3 @@
+name = Entity Autocomplete
+descriptions = Adds a callback that will autocomplate any entity that defines a label
+core = 7.x

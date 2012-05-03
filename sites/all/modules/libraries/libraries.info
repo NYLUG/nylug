@@ -1,0 +1,4 @@
+name = Libraries
+description = Allows version dependent and shared usage of external libraries.
+core = 7.x
+files[] = tests/libraries.test

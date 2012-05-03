@@ -1,0 +1,66 @@
+<?php
+
+class RulesAutotagTestCase extends DrupalWebTestCase {
+  protected $vocabulary, $term1, $term2, $term3, $term4, $text;
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Rules Autotag Test',
+      'description' => "Tests the 'Extract tags' action.",
+      'group' => 'Rules Autotag',
+    );
+  }
+
+  public function setUp() {
+    parent::setUp('rules_autotag');
+
+    // Create vocabulary.
+    $this->vocabulary = new stdClass();
+    $this->vocabulary->name = $this->randomName();
+    $this->vocabulary->description = $this->randomName();
+    $this->vocabulary->machine_name = drupal_strtolower($this->randomName());
+    $this->vocabulary->help = '';
+    $this->vocabulary->weight = mt_rand(0, 10);
+    taxonomy_vocabulary_save($this->vocabulary);
+
+    // Create terms.
+    $this->term1 = new stdClass();
+    $this->term1->name = "Term1";
+    $this->term1->vid = $this->vocabulary->vid;
+    taxonomy_term_save($this->term1);
+    
+    $this->term2 = new stdClass();
+    $this->term2->name = "Term2";
+    $this->term2->vid = $this->vocabulary->vid;
+    taxonomy_term_save($this->term2);
+    
+    $this->term3 = new stdClass();
+    $this->term3->name = "Term3";
+    $this->term3->vid = $this->vocabulary->vid;
+    taxonomy_term_save($this->term3);
+    
+    $this->term4 = new stdClass();
+    $this->term4->name = "Compound name";
+    $this->term4->vid = $this->vocabulary->vid;
+    taxonomy_term_save($this->term4);
+    
+    // Define text.
+    $this->text = "adsf werqwer Term1 term2 xycvyx Compound name";
+  }
+
+  public function testTagging() {
+     $text = "Term1 Term2";
+     $action = rules_action('rules_autotag_extract');
+     list($terms) = $action->execute($this->text, $this->vocabulary);
+
+     $tids = array();
+     foreach ($terms as $term) {
+       $tids[] = $term->tid; 
+     }
+
+     $this->assertTrue(in_array($this->term1->tid, $tids), t('Term found.'));
+     $this->assertTrue(in_array($this->term2->tid, $tids), t('Lower term name found.'));
+     $this->assertFalse(in_array($this->term3->tid, $tids), t('Term correctly not found.'));
+     $this->assertTrue(in_array($this->term4->tid, $tids), t('Compound term name found.'));
+  }
+}
