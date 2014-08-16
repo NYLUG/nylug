@@ -1,0 +1,13 @@
+name = Diff
+description = Show differences between content revisions.
+core = 7.x
+configure = admin/config/content/diff
+
+files[] = DiffEngine.php
+
+; Information added by  packaging script on 2013-11-01
+version = "7.x-3.2+20-dev"
+core = "7.x"
+project = "diff"
+datestamp = "1383348219"
+

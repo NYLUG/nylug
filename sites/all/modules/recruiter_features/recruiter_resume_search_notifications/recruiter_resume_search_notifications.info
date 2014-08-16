@@ -1,0 +1,21 @@
+name = Recruiter resume search notifications
+description = Provides search notifications / saved searches for the resume search.
+core = 7.x
+package = Recruiter
+php = 5.2.4
+project = recruiter_resume_search_notifications
+dependencies[] = context
+dependencies[] = entity
+dependencies[] = recruiter_resume_search
+dependencies[] = search_api_saved_searches
+features[context][] = resume_search_notifications
+features[ctools][] = context:context:3
+features[features_api][] = api:1
+features[search_api_saved_searches_settings][] = resume_search
+
+; Information added by drupal.org packaging script on 2013-01-28
+version = "7.x-1.0-rc2+2-dev"
+core = "7.x"
+project = "recruiter_features"
+datestamp = "1359380459"
+

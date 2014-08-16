@@ -1,0 +1,13 @@
+name = Database logging
+description = Logs and records system events to the database.
+package = Core
+version = VERSION
+core = 7.x
+files[] = dblog.test
+
+
+; Information added by drush on 2014-07-20
+version = "7.29+17-dev"
+project = "drupal"
+datestamp = "1405831620"
+

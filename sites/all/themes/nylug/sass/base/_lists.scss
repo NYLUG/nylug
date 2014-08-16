@@ -1,0 +1,15 @@
+nav#block-system-navigation li.collapsed,
+nav#block-system-navigation .menu .leaf,
+.view-id-sponsors ul li {
+  list-style-image: none;
+  list-style-type: none;
+}
+ul li a, h1.site-name a {
+  color: #707070;
+  text-decoration: none
+}
+ul li { 
+  line-height: 1.3em;
+  letter-spacing: 0.3px
+}
+.view-sponsors ul li.views-row-2 .views-field-field-image { margin-left: -2px }

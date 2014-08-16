@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Adds Meetup feed parsers to the Feeds module.
+ */
+
+/**
+ * Implements ctools_plugin_api().
+ */
+function feeds_meetup_ctools_plugin_api($owner, $api) {
+  if ($owner == 'feeds' && $api == 'plugins') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implements hook_feeds_plugins().
+ */
+function feeds_meetup_feeds_plugins() {
+  return array(
+    'FeedsMeetupEventParser' => array(
+      'name' => t('Meetup parser: Events'),
+      'description' => t('Parse Meetup event feeds.'),
+      'help' => t('Parse Meetup event XML feeds using XPath.'),
+      'handler' => array(
+        'parent' => 'FeedsParser',
+        'class' => 'FeedsMeetupEventParser',
+        'file' => 'FeedsMeetupEventParser.inc',
+      ),
+    ),
+    'FeedsMeetupGroupParser' => array(
+      'name' => t('Meetup parser: Groups'),
+      'description' => t('Parse Meetup group feeds.'),
+      'help' => t('Parse Meetup group XML feeds using XPath.'),
+      'handler' => array(
+        'parent' => 'FeedsParser',
+        'class' => 'FeedsMeetupGroupParser',
+        'file' => 'FeedsMeetupGroupParser.inc',
+      ),
+    ),
+    'FeedsMeetupVenueParser' => array(
+      'name' => t('Meetup parser: Venues'),
+      'description' => t('Parse Meetup venue feeds.'),
+      'help' => t('Parse Meetup venue XML feeds using XPath.'),
+      'handler' => array(
+        'parent' => 'FeedsParser',
+        'class' => 'FeedsMeetupVenueParser',
+        'file' => 'FeedsMeetupVenueParser.inc',
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_help().
+ */
+function feeds_meetup_help($path, $arg) {
+  $ret_val = '';
+  switch ($path) {
+    case 'admin/help#feeds_meetup':
+      $ret_val = '<h3>' . t('About') . '</h3>';
+      $ret_val .= '<p>' . t('Feeds: Meetup extends Feeds and Feeds XPath Parser to consume data from Meetup.com XML feeds.') . '</p>';
+      break;
+  }
+  return $ret_val;
+}
+
+/**
+ * Adjust millisecond-based Unix timestamp to second-based.
+ */
+function _feeds_meetup_msToSeconds($milliseconds) {
+  return $milliseconds / 1000;
+}

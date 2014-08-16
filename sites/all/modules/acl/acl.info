@@ -1,0 +1,13 @@
+name = ACL
+description = Access control list API. Has no features on its own.
+core = 7.x
+package = Access control
+
+files[] = tests/acl.test
+
+; Information added by  packaging script on 2013-11-05
+version = "7.x-1.0+6-dev"
+core = "7.x"
+project = "acl"
+datestamp = "1383688105"
+

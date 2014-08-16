@@ -1,0 +1,44 @@
+name = Recruiter common
+description = Foundational components for the Recruiter distribution.
+core = 7.x
+package = Recruiter
+php = 5.2.4
+project = recruiter_common
+dependencies[] = context
+dependencies[] = features
+dependencies[] = role_export
+dependencies[] = strongarm
+dependencies[] = taxonomy
+dependencies[] = wysiwyg
+features[context][] = recruiter_render_slim
+features[ctools][] = context:context:3
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[filter][] = filtered_html
+features[taxonomy][] = career_status
+features[taxonomy][] = degree_level
+features[taxonomy][] = employment_type
+features[taxonomy][] = fields_of_study
+features[taxonomy][] = general_skills
+features[taxonomy][] = geography
+features[taxonomy][] = industry_fields
+features[taxonomy][] = it_skills
+features[taxonomy][] = languages
+features[taxonomy][] = occupational_fields
+features[taxonomy][] = tags
+features[taxonomy][] = years_of_experience
+features[user_role][] = administrator
+features[user_role][] = content admin
+features[user_role][] = recruiter
+features[variable][] = colorbox_load
+features[variable][] = colorbox_path
+features[variable][] = date_format_date_only
+features[wysiwyg][] = filtered_html
+files[] = recruiter_common_test_case.php
+
+; Information added by drupal.org packaging script on 2013-01-28
+version = "7.x-1.0-rc2+2-dev"
+core = "7.x"
+project = "recruiter_features"
+datestamp = "1359380459"
+

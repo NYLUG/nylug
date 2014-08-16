@@ -1,0 +1,16 @@
+; $Id:$
+name = "ACL Node module tests"
+description = "Support module for ACL node related testing."
+package = Testing
+version = VERSION
+core = 7.x
+hidden = TRUE
+
+files[] = acl_node_test.module
+
+; Information added by  packaging script on 2013-11-05
+version = "7.x-1.0+6-dev"
+core = "7.x"
+project = "acl"
+datestamp = "1383688105"
+
