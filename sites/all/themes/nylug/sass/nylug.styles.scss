@@ -27,9 +27,17 @@
       width: $mobi-tablet-landscape;
     }
 }
+// location map
+iframe {
+  height: 500px;
+  max-width: 100%;
+}
 a.site-logo { margin-top: -5px }
 
-article { margin-top: -50px }
+article {
+  margin-top: -50px;
+}
+
 .l-main {
   @include clearfix;
 }
@@ -54,7 +62,7 @@ ul.breadcrumb li {
   text-shadow: 1px 1px 0 #ffffff;
 }
 
-#main-content { 
+#main-content {
   @include clearfix
 }
 
@@ -65,12 +73,40 @@ ul.breadcrumb li {
 
 header { margin: 2.221em 0 3em 10px }
 
+@include breakpoint($tiny-teeny-fucking-mobi) {
+  html {
+    content: 'tiny fucking embedded lpos';
+  }
+  header {
+    margin: 1.221em 7px 0;
+  }
+  h1.site-name {
+    line-height: 1px;
+  }
+  h1.site-name span {
+    font-size: 0.9em;
+  }
+  ul.breadcrumb {
+   margin: -2% auto;
+  }
+  iframe {
+    max-width: 90%;
+    height: 90%;
+  }
+}
+
 @include breakpoint($mobi-portrait) {
+  html {
+    content: 'mobi portrait';
+  }
   .site-name {
     margin: 5px 0 -65px 0;
   }
   .l-region--sidebar-first li {
     margin-left: 2%;
+  }
+  ul.breadcrumb {
+    margin: 15% auto;
   }
   h2.block__title {
     font-size: 125%;
@@ -81,43 +117,50 @@ header { margin: 2.221em 0 3em 10px }
   body.front article {
     margin-top: -30px;
   }
-  body.not-front header { 
-    margin-bottom: 4em;
-  }
   body.not-front article h1 {
     font-size: 130%;
   }
   article {
     padding: 8px;
+    margin-top: -35px;
     text-align: justify;
   }
 }
 
 @include breakpoint($mobi-landscape) {
+  html {
+    content: 'mobi landscape';
+  }
   h1.site-name span {
     font-size: 140%;
   }
 }
 
-@include breakpoint($mobi-small-tablet-portrait) {
-  h1.site-name span {
-    font-size: 160%;
+@include breakpoint($mobi-medium-tablet) {
+  html {
+    content: 'mobi medium tablet';
   }
 }
 
-@include breakpoint($mobi-small-tablet-landscape) {
+@include breakpoint($mobi-small-tablet-portrait) {
+  html {
+    content: 'mobi small tablet portrait';
+  }
+  ul.breadcrumb {
+   margin: 10% auto;
+  }
+  body.not-front article {
+    margin-top: -35px;
+  }
   h1.site-name span {
     font-size: 174%;
   }
 }
 
 @include breakpoint($mobi-tablet-portrait) {
-  h1.site-name span {
-    font-size: 190%;
+  html {
+    content: 'mobi tablet portrait';
   }
-}
-
-@include breakpoint($mobi-tablet-portrait) {
   .l-region--sidebar-first {
     @include grid-span(4,1);
       margin: 10% auto;
@@ -139,8 +182,11 @@ header { margin: 2.221em 0 3em 10px }
   ul.breadcrumb {
     margin: 13% auto;
   }
+  body.front article {
+    margin-top: 30px;
+  }
   body.not-front article {
-    margin-top: -60px;
+    margin-top: -35px;
   }
   article {
     margin-top: 35px;
@@ -148,14 +194,26 @@ header { margin: 2.221em 0 3em 10px }
     text-align: justify;
   }
   h1.site-name span {
-    font-size: 1.5em;
+    font-size: 180%;
   }
   p {
     letter-spacing: 0.4px;
   }
 }
 
+@include breakpoint($mobi-small-tablet-landscape) {
+  html {
+    content: 'mobi small tablet landscape';
+  }
+  h1.site-name span {
+    font-size: 174%;
+  }
+}
+
 @include breakpoint($mobi-tablet-landscape) {
+  html {
+    content: 'mobi tablet landscape';
+  }
   .l-region--sidebar-first {
     @include grid-span(4,1);
       margin: 8% auto;
@@ -175,13 +233,16 @@ header { margin: 2.221em 0 3em 10px }
     margin-top: -14px;
   }
   h1.site-name span {
-    font-size: 2em;
+    font-size: 194%;
   }
   ul.breadcrumb {
     margin: 11% auto;
   }
+  body.front article {
+    margin-top: 33px;
+  }
   body.not-front article {
-    margin-top: -50px
+    margin-top: -35px
   }
   article {
     margin-top: 42px;

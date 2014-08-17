@@ -26,6 +26,6 @@ function nylug_breadcrumb($variables) {
    return $crumbs;
    }
    else {
-     return t("Home");
+     return t('Home', array('@url' => url('node')));
    }
  }

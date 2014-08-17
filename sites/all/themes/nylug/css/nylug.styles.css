@@ -60,15 +60,20 @@ h1.site-name span {
     .l-page {
       width: 1024px; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000331}}
+iframe {
+  height: 500px;
+  max-width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000335}}
 a.site-logo {
   margin-top: -5px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000337}}
 article {
   margin-top: -50px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000341}}
 .l-main {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -84,16 +89,16 @@ article {
   .l-main:after {
     clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000345}}
 ul {
   margin: 0.5em auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000349}}
 ul.breadcrumb {
   margin: 4% auto;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000353}}
 ul.breadcrumb li {
   list-style: none;
   margin: 0;
@@ -105,7 +110,7 @@ ul.breadcrumb li {
   font-size: 0.8em;
   text-shadow: 1px 1px 0 #ffffff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000365}}
 #main-content {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -121,66 +126,112 @@ ul.breadcrumb li {
   #main-content:after {
     clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000369}}
 #block-views-meetup-com-feed-block .block__content {
   margin-top: 0.8em;
   font-size: 80%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000374}}
 header {
   margin: 2.221em 0 3em 10px; }
 
+@media (min-width: 4.6875em) and (max-width: 19em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000377}}
+  html {
+    content: 'tiny fucking embedded lpos'; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000380}}
+  header {
+    margin: 1.221em 7px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000383}}
+  h1.site-name {
+    line-height: 1px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000386}}
+  h1.site-name span {
+    font-size: 0.9em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000389}}
+  ul.breadcrumb {
+    margin: -2% auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000392}}
+  iframe {
+    max-width: 90%;
+    height: 90%; } }
 @media (min-width: 20em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000399}}
+  html {
+    content: 'mobi portrait'; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003102}}
   .site-name {
     margin: 5px 0 -65px 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003105}}
   .l-region--sidebar-first li {
     margin-left: 2%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003108}}
+  ul.breadcrumb {
+    margin: 15% auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003111}}
   h2.block__title {
     font-size: 125%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003114}}
   h1.site-name span {
     font-size: 115%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003117}}
   body.front article {
     margin-top: -30px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000384}}
-  body.not-front header {
-    margin-bottom: 4em; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003120}}
   body.not-front article h1 {
     font-size: 130%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003123}}
   article {
     padding: 8px;
+    margin-top: -35px;
     text-align: justify; } }
 @media (min-width: 30em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003131}}
+  html {
+    content: 'mobi landscape'; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003134}}
   h1.site-name span {
     font-size: 140%; } }
+@media (min-width: 37.5em) and (max-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003140}}
+  html {
+    content: 'mobi medium tablet'; } }
 @media (min-width: 37.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003103}}
-  h1.site-name span {
-    font-size: 160%; } }
-@media (min-width: 50em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003146}}
+  html {
+    content: 'mobi small tablet portrait'; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003149}}
+  ul.breadcrumb {
+    margin: 10% auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003152}}
+  body.not-front article {
+    margin-top: -35px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003155}}
   h1.site-name span {
     font-size: 174%; } }
 @media (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003115}}
-  h1.site-name span {
-    font-size: 190%; } }
-@media (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003161}}
+  html {
+    content: 'mobi tablet portrait'; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003164}}
   .l-region--sidebar-first {
     width: 31.91489%;
     float: left;
@@ -191,7 +242,7 @@ header {
     font-size: 115%;
     font-family: 'PT Sans', sans-serif; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003170}}
   .l-content {
     width: 65.95745%;
     float: right;
@@ -200,7 +251,7 @@ header {
     clear: none;
     padding-left: 0.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003174}}
   .site-logo {
     width: 31.91489%;
     float: left;
@@ -208,7 +259,7 @@ header {
     margin-left: 0%;
     clear: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003177}}
   .site-name {
     width: 65.95745%;
     float: right;
@@ -218,29 +269,45 @@ header {
     margin-top: -14px;
     padding-left: 0.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003182}}
   ul.breadcrumb {
     margin: 13% auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003142}}
-  body.not-front article {
-    margin-top: -60px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003185}}
+  body.front article {
+    margin-top: 30px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003145}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003188}}
+  body.not-front article {
+    margin-top: -35px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003191}}
   article {
     margin-top: 35px;
     padding: 8px;
     text-align: justify; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003196}}
   h1.site-name span {
-    font-size: 1.5em; }
+    font-size: 180%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003199}}
   p {
     letter-spacing: 0.4px; } }
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003205}}
+  html {
+    content: 'mobi small tablet landscape'; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003208}}
+  h1.site-name span {
+    font-size: 174%; } }
 @media (min-width: 64em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003214}}
+  html {
+    content: 'mobi tablet landscape'; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003217}}
   .l-region--sidebar-first {
     width: 31.91489%;
     float: left;
@@ -251,7 +318,7 @@ header {
     font-size: 115%;
     font-family: 'PT Sans', sans-serif; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003165}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003223}}
   .l-content {
     width: 65.95745%;
     float: right;
@@ -260,7 +327,7 @@ header {
     clear: none;
     padding-left: 1.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003227}}
   .site-logo {
     width: 31.91489%;
     float: left;
@@ -268,7 +335,7 @@ header {
     margin-left: 0%;
     clear: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003172}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003230}}
   .site-name {
     width: 65.95745%;
     float: right;
@@ -278,24 +345,28 @@ header {
     padding-left: 0.5em;
     margin-top: -14px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003235}}
   h1.site-name span {
-    font-size: 2em; }
+    font-size: 194%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003238}}
   ul.breadcrumb {
     margin: 11% auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003183}}
-  body.not-front article {
-    margin-top: -50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003241}}
+  body.front article {
+    margin-top: 33px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003244}}
+  body.not-front article {
+    margin-top: -35px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003247}}
   article {
     margin-top: 42px;
     padding: 8px;
     text-align: justify; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003191}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\00003252}}
   ul.menu, #block-views-sponsors-block-2 .block__content {
     margin-left: 11px; } }

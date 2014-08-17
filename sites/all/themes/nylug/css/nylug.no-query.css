@@ -56,15 +56,20 @@ h1.site-name span {
 .l-page {
   margin: 0 auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000331}}
+iframe {
+  height: 500px;
+  max-width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000335}}
 a.site-logo {
   margin-top: -5px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000337}}
 article {
   margin-top: -50px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000341}}
 .l-main {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -80,16 +85,16 @@ article {
   .l-main:after {
     clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000345}}
 ul {
   margin: 0.5em auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000349}}
 ul.breadcrumb {
   margin: 4% auto;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000353}}
 ul.breadcrumb li {
   list-style: none;
   margin: 0;
@@ -101,7 +106,7 @@ ul.breadcrumb li {
   font-size: 0.8em;
   text-shadow: 1px 1px 0 #ffffff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000365}}
 #main-content {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -117,11 +122,11 @@ ul.breadcrumb li {
   #main-content:after {
     clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000369}}
 #block-views-meetup-com-feed-block .block__content {
   margin-top: 0.8em;
   font-size: 80%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.styles\.scss}line{font-family:\0000374}}
 header {
   margin: 2.221em 0 3em 10px; }
