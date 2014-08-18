@@ -5,6 +5,8 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 
+sites/all/themes/README.txt
+sites/all/themes/omega
 .gem
 .npm
 .rvm

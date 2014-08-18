@@ -10,3 +10,7 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.hacks\.scss}line{font-family:\0000315}}
 body.front h2.node__title {
   display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/nylug\.org\/htdocs\/sites\/all\/themes\/nylug\/sass\/nylug\.hacks\.scss}line{font-family:\0000318}}
+article footer.node__submitted {
+  display: none; }

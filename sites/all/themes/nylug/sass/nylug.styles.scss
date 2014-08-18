@@ -23,7 +23,7 @@
 
 .l-page {
     margin: 0 auto;
-    @include breakpoint($mobi-tablet-landscape) {
+    @include breakpoint($mobi-tablet-landscape, true) {
       width: $mobi-tablet-landscape;
     }
 }
@@ -32,7 +32,9 @@ iframe {
   height: 500px;
   max-width: 100%;
 }
-a.site-logo { margin-top: -5px }
+a.site-logo {
+  margin-top: -5px;
+}
 
 article {
   margin-top: -50px;
@@ -63,7 +65,7 @@ ul.breadcrumb li {
 }
 
 #main-content {
-  @include clearfix
+  @include clearfix;
 }
 
 #block-views-meetup-com-feed-block .block__content {
@@ -71,9 +73,11 @@ ul.breadcrumb li {
   font-size: 80%;
 }
 
-header { margin: 2.221em 0 3em 10px }
+header {
+  margin: 2.221em 0 3em 10px;
+}
 
-@include breakpoint($tiny-teeny-fucking-mobi) {
+@include breakpoint($tiny-teeny-fucking-mobi, true) {
   html {
     content: 'tiny fucking embedded lpos';
   }
@@ -95,7 +99,7 @@ header { margin: 2.221em 0 3em 10px }
   }
 }
 
-@include breakpoint($mobi-portrait) {
+@include breakpoint($mobi-portrait, true) {
   html {
     content: 'mobi portrait';
   }
@@ -120,6 +124,12 @@ header { margin: 2.221em 0 3em 10px }
   body.not-front article h1 {
     font-size: 130%;
   }
+  body.front.page-planet article {
+    margin-top: -35px;
+  }
+  body.not-front article {
+    margin-top: -25px;
+  }
   article {
     padding: 8px;
     margin-top: -35px;
@@ -127,7 +137,7 @@ header { margin: 2.221em 0 3em 10px }
   }
 }
 
-@include breakpoint($mobi-landscape) {
+@include breakpoint($mobi-landscape, true) {
   html {
     content: 'mobi landscape';
   }
@@ -136,28 +146,25 @@ header { margin: 2.221em 0 3em 10px }
   }
 }
 
-@include breakpoint($mobi-medium-tablet) {
+@include breakpoint($mobi-medium-tablet, true) {
   html {
     content: 'mobi medium tablet';
   }
 }
 
-@include breakpoint($mobi-small-tablet-portrait) {
+@include breakpoint($mobi-small-tablet-portrait, true) {
   html {
     content: 'mobi small tablet portrait';
   }
   ul.breadcrumb {
    margin: 10% auto;
   }
-  body.not-front article {
-    margin-top: -35px;
-  }
   h1.site-name span {
     font-size: 174%;
   }
 }
 
-@include breakpoint($mobi-tablet-portrait) {
+@include breakpoint($mobi-tablet-portrait, true) {
   html {
     content: 'mobi tablet portrait';
   }
@@ -185,9 +192,6 @@ header { margin: 2.221em 0 3em 10px }
   body.front article {
     margin-top: 30px;
   }
-  body.not-front article {
-    margin-top: -35px;
-  }
   article {
     margin-top: 35px;
     padding: 8px;
@@ -201,16 +205,16 @@ header { margin: 2.221em 0 3em 10px }
   }
 }
 
-@include breakpoint($mobi-small-tablet-landscape) {
+@include breakpoint($mobi-small-tablet-landscape, true) {
   html {
     content: 'mobi small tablet landscape';
   }
   h1.site-name span {
-    font-size: 174%;
+    font-size: 200%;
   }
 }
 
-@include breakpoint($mobi-tablet-landscape) {
+@include breakpoint($mobi-tablet-landscape, true) {
   html {
     content: 'mobi tablet landscape';
   }
@@ -233,16 +237,10 @@ header { margin: 2.221em 0 3em 10px }
     margin-top: -14px;
   }
   h1.site-name span {
-    font-size: 194%;
+    font-size: 221%;
   }
   ul.breadcrumb {
     margin: 11% auto;
-  }
-  body.front article {
-    margin-top: 33px;
-  }
-  body.not-front article {
-    margin-top: -35px
   }
   article {
     margin-top: 42px;
@@ -253,5 +251,3 @@ header { margin: 2.221em 0 3em 10px }
     margin-left: 11px;
   }
 }
-
-

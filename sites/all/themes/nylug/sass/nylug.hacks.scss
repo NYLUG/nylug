@@ -12,4 +12,9 @@
   }
 }
 
-body.front h2.node__title { display: none }
+body.front h2.node__title {
+  display: none;
+}
+article footer.node__submitted {
+  display: none;
+}
