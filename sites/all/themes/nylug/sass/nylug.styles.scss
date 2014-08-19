@@ -32,12 +32,13 @@ iframe {
   height: 500px;
   max-width: 100%;
 }
+
 a.site-logo {
   margin-top: -5px;
 }
 
 article {
-  margin-top: -50px;
+  @include clearfix;
 }
 
 .l-main {
@@ -45,13 +46,18 @@ article {
 }
 
 ul {
-  margin: 0.5em auto;
+  margin: 0.2em auto;
+}
+
+ul li {
+  list-style-type: none;
 }
 
 ul.breadcrumb {
   margin: 4% auto;
   padding: 0;
 }
+
 ul.breadcrumb li {
   list-style: none;
   margin: 0;
@@ -118,21 +124,15 @@ header {
   h1.site-name span {
     font-size: 115%;
   }
-  body.front article {
-    margin-top: -30px;
-  }
   body.not-front article h1 {
     font-size: 130%;
   }
-  body.front.page-planet article {
-    margin-top: -35px;
-  }
   body.not-front article {
-    margin-top: -25px;
+    margin-top: 0;
   }
   article {
     padding: 8px;
-    margin-top: -35px;
+    margin-top: -5%;
     text-align: justify;
   }
 }
@@ -143,6 +143,9 @@ header {
   }
   h1.site-name span {
     font-size: 140%;
+  }
+  article {
+    margin-top: -5%;
   }
 }
 
@@ -161,6 +164,9 @@ header {
   }
   h1.site-name span {
     font-size: 174%;
+  }
+  article {
+    margin-top: 5%;
   }
 }
 
@@ -189,11 +195,7 @@ header {
   ul.breadcrumb {
     margin: 13% auto;
   }
-  body.front article {
-    margin-top: 30px;
-  }
   article {
-    margin-top: 35px;
     padding: 8px;
     text-align: justify;
   }
@@ -210,7 +212,13 @@ header {
     content: 'mobi small tablet landscape';
   }
   h1.site-name span {
-    font-size: 200%;
+    font-size: 186%;
+  }
+  article {
+    margin-top: 7%;
+  }
+  body.not-front article {
+    margin-top: -2.21%;
   }
 }
 
@@ -243,7 +251,6 @@ header {
     margin: 11% auto;
   }
   article {
-    margin-top: 42px;
     padding: 8px;
     text-align: justify;
   }
