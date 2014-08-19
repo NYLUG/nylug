@@ -1,6 +1,0 @@
-name = X-ray
-description = [xray] Shows internal structures and connections of the web site.
-package = Development
-core = 7.x
-stylesheets[all][] = xray.css
-dependencies[] = help

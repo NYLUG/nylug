@@ -1,0 +1,28 @@
+// Import the legacy variables (relevant for controlling compass-normalize).
+@import "variables/**/*";
+
+// Generate normalize.css.
+@import "normalize";
+
+// Use 'border-box' for the box model.
+@import "toolkit/border-box";
+
+.l-region--sidebar-first, .l-content {
+  font-size: 115%;
+  font-family: 'PT Sans', sans-serif
+}
+.l-region--sidebar-first #block-system-navigation h2,
+.l-region--sidebar-first #block-views-sponsors-block-2 h2 {
+  background-color: #F0F0F0;
+  padding: 4px 0 4px 22px
+}
+.l-region--sidebar-first h2 {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 100%;
+  font-weight: bold;
+  color: #505050;
+  text-align: left;
+}	  
+
+ul { padding: 0 }
+

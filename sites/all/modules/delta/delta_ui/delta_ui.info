@@ -1,7 +1,0 @@
-name = Delta UI
-description = The Delta UI provides a user interface to build and edit the contextual theme settings provided by the Delta module.
-package = Theme Tools
-core = 7.x
-version = 7.x-3.x-dev
-
-dependencies[] = delta

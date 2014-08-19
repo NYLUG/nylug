@@ -1,8 +1,0 @@
-name = Delta API
-description = The Delta module is an advanced manipulation of the Theme Settings API to allow for customization/configuration of theme settings based on node types, context, or groups of paths.
-package = Theme Tools
-core = 7.x
-version = 7.x-3.x-dev
-
-dependencies[] = ctools
-
